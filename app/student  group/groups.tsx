@@ -40,7 +40,32 @@ const getGroups = async () => {
   setGroups(data || [])
 }
   return (
-    <div>groups</div>
+    <div>
+        <main className="min-h-screen bg-slate-100 p-8">
+  <div className="mx-auto max-w-6xl rounded-3xl bg-white p-6">
+    <div className="mb-8 flex items-center justify-between gap-4">
+      <div className="h-16 w-16 rounded-2xl border bg-white"></div>
+
+      <input
+        placeholder="search by group name"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-96 rounded-xl border px-4 py-3"
+      />
+
+      <div className="flex gap-4">
+        <button className="rounded-xl border px-5 py-3">
+          add group
+        </button>
+
+        <button className="rounded-xl border px-5 py-3">
+          add student
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+    </div>
   )
 }
 
